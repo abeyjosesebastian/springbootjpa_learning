@@ -4,10 +4,15 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
-@Entity@Data
+@Entity
+@Data
+//@MappedSuperclass
 @NoArgsConstructor
 @AllArgsConstructor
+@SuperBuilder
+@Inheritance
 public class Resources {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
